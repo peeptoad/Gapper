@@ -45,4 +45,22 @@ function update() {
   }
 }
 
+document.addEventListener("keydown", function(event) {
+  switch (event.keyCode) {
+    case 37: // left arrow
+      player.x -= 10;
+      break;
+    case 38: // up arrow
+      player.y -= 10;
+      break;
+    case 39: // right arrow
+      player.x += 10;
+      break;
+    case 40: // down arrow
+      player.y += 10;
+      break;
+  }
+});
+
+
 setInterval(update, 30);
