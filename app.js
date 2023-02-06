@@ -1,6 +1,14 @@
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
 
+const startButton = document.getElementById("startButton");
+
+startButton.addEventListener("click", function() {
+  setInterval(update, 30);
+});
+
+
+
 const player = {
   x: canvas.width / 2,
   y: canvas.height - 20,
